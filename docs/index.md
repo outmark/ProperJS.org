@@ -28,7 +28,7 @@ TODO: Explain
 
 ## Prefer the Agoric bundler
 
-If you need to load code into your running environment, you should use the Agoric bundler because it:
+If you need to load code into your running environment, you should use the [Agoric bundler](https://github.com/Agoric/agoric-sdk/tree/master/packages/bundle-source) because it:
 
 * Has a minimal translation of modules to plain script code.
 * Targets environments that don't understand ESM nor CommonJS.
@@ -43,7 +43,7 @@ After development, use the following to create a bundle:
 ```js
 import bundleSource from '@agoric/bundle-source';
 
-const bundle = bundleSource('path/to/my/entry/module.js');
+const bundle = await bundleSource('path/to/my/entry/module.js');
 const jsonBundle = JSON.stringify(bundle);
 // Then write jsonBundle to disk or send over the network.
 ...
