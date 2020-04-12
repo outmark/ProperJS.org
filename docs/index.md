@@ -10,7 +10,7 @@ Use the `.cjs` suffix when you need to write (or transpile) CommonJS format.
 
 ## Use Typescript annotations, but write standard Javascript
 
-We don't want to write Typescript, as it requires transpilation.  Instead, we use [https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#supported-jsdoc](JSDoc annotations) that are validated by Typescript, but don't make the actual code nonstandard.  This has the added benefit of Intellisense, which helps with discoverability of your code.
+We don't want to write Typescript, as it requires transpilation.  Instead, we use [JSDoc annotations](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html#supported-jsdoc) that are validated by Typescript, but don't make the actual code nonstandard.  This has the added benefit of Intellisense, which helps with discoverability of your code.
 
 To have the Typescript compiler validate a `.js` file's JSDocs, add:
 
