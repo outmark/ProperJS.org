@@ -5,7 +5,7 @@ Have a look at the [index.js](index.js), it enables Typescript checking, then de
 
 ## TSC compilation
 
-The (mostly empty) [jsconfig.json](jsconfig.json) tells the Typescript compiler to use this configuration (defaulting not to generate files, and to allow `.js` suffixes).  Then you can run:
+The (mostly empty) [jsconfig.json](jsconfig.json) tells the Typescript compiler to use this configuration, and to generate an [index.d.ts](index.d.ts) describing the JSDoc within the file.  To generate that declaration file, as well as typecheck, you can run:
 
 ```
 $ tsc -p jsconfig.json
