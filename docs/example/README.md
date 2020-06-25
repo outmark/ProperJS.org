@@ -8,16 +8,16 @@ Have a look at the [index.js](index.js), it enables Typescript checking, then de
 The (mostly empty) [jsconfig.json](jsconfig.json) tells the Typescript compiler to use this configuration, and to generate an [index.d.ts](index.d.ts) describing the JSDoc within the file.  To generate that declaration file, as well as typecheck, you can run:
 
 ```
-$ tsc -p jsconfig.json
-index.js:13:5 - error TS2345: Argument of type '"a"' is not assignable to parameter of type 'number'.
+$ rm -f *.d.ts && tsc -p jsconfig.json
+index.js:25:6 - error TS2345: Argument of type '"a"' is not assignable to parameter of type 'number'.
 
-13 add('a', 2);
-       ~~~
+25 add2('a', 2);
+        ~~~
 
-index.js:14:5 - error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
+index.js:26:6 - error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
 
-14 add({}, 3);
-       ~~
+26 add3({}, 3);
+        ~~
 
 
 Found 2 errors.
